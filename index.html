@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedCare - Medical AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <span class="logo-text">MedCare</span>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <button class="icon-btn" id="shareBtn">
+                    <i class="fas fa-share-alt"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-label">Medical AI</div>
+                <h1 class="hero-title">Healthcare Solutions</h1>
+                <p class="hero-description">
+                    Get instant, accurate medical information from our AI-powered assistant trained on comprehensive medical literature.
+                </p>
+                <button class="cta-btn" id="startChatBtn">
+                    <i class="fas fa-comments"></i>
+                    Start Consultation
+                </button>
+            </div>
+            <div class="hero-illustration">
+                <div class="doctors-container">
+                    <div class="doctor doctor-1">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor doctor-2">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <div class="medical-icons">
+                        <div class="med-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="med-icon"><i class="fas fa-plus"></i></div>
+                        <div class="med-icon"><i class="fas fa-tooth"></i></div>
+                        <div class="med-icon"><i class="fas fa-eye"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>24/7 Available</h3>
+                <p>Get medical information anytime, anywhere</p>
+                <button class="feature-btn">Access</button>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Instant Search</h3>
+                <p>Find relevant medical information quickly</p>
+                <button class="feature-btn">Search</button>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-book-medical"></i>
+                </div>
+                <h3>Medical Literature</h3>
+                <p>Based on comprehensive medical textbooks</p>
+                <button class="feature-btn">Learn</button>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Safe & Reliable</h3>
+                <p>Always consult healthcare professionals</p>
+                <button class="feature-btn">Safety</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Interface -->
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i>
+                <span>Medical AI Assistant</span>
+            </div>
+            <button class="close-chat" id="closeChatBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! I'm your medical AI assistant. I can help you find information about various medical topics based on comprehensive medical literature. What would you like to know?</p>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <div class="chat-input-wrapper">
+                <input type="text" id="chatInput" placeholder="Ask about symptoms, treatments, medications..." maxlength="500">
+                <button id="sendBtn" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="input-footer">
+                <small>⚠️ This is for educational purposes only. Always consult a healthcare professional.</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Medical Services Section -->
+    <section class="services">
+        <div class="section-header">
+            <div class="section-label">SERVICE</div>
+            <h2 class="section-title">Our Medical Services</h2>
+        </div>
+        <div class="services-content">
+            <div class="service-illustration">
+                <div class="service-doctor">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="service-icons">
+                    <div class="service-icon"><i class="fas fa-pills"></i></div>
+                    <div class="service-icon"><i class="fas fa-tooth"></i></div>
+                    <div class="service-icon"><i class="fas fa-heart"></i></div>
+                    <div class="service-icon"><i class="fas fa-eye"></i></div>
+                </div>
+            </div>
+            <div class="service-text">
+                <h3>AI-Powered Medical Information</h3>
+                <p>Our advanced AI system provides accurate medical information based on comprehensive medical literature, covering 9 medical specialties with over 255,000 text chunks.</p>
+                <button class="service-btn">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section class="specialties">
+        <div class="section-header">
+            <div class="section-label">FEATURES</div>
+            <h2 class="section-title">Our Specialties</h2>
+        </div>
+        <div class="specialty-card">
+            <div class="specialty-content">
+                <div class="specialty-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>Instant Medical Consultation</h3>
+                <p>Get immediate answers to your medical questions based on evidence-based medical literature and clinical guidelines.</p>
+                <button class="specialty-btn">Ask Now</button>
+            </div>
+            <div class="specialty-illustration">
+                <div class="stethoscope-hand">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <span class="logo-text">MedCare</span>
+            </div>
+            <div class="footer-disclaimer">
+                <p><strong>Medical Disclaimer:</strong> This AI assistant provides information for educational purposes only. Always consult qualified healthcare professionals for medical advice, diagnosis, or treatment.</p>
+            </div>
+            <div class="footer-stats">
+                <div class="stat">
+                    <span class="stat-number">255K+</span>
+                    <span class="stat-label">Medical Texts</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">9</span>
+                    <span class="stat-label">Specialties</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Available</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
