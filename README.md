@@ -68,37 +68,29 @@ text
 
 <div align="center">
 
-```mermaid
 graph TB
-    subgraph Client
-        A[👤 User] <-->|Interactive Chat| B[🌐 React Frontend]
-    end
+A[👤 User] -->|Query| B[🌐 Frontend]
+B -->|HTTP POST| C[⚡ FastAPI Backend]
+C -->|Vector Embedding| D[🧮 Sentence Transformer]
+D -->|Search| E[📊 FAISS Vector DB
+255,122 vectors]
+E -->|Top 5 Results| F[🔍 Retriever]
+F -->|Context| G[🤖 Response Generator]
+G -->|Answer + Citations| C
+C -->|JSON Response| B
+B -->|Display| A
 
-    subgraph Server
-        B <-->|REST API| C[⚡ FastAPI Backend]
-    end
+text
+style A fill:#ff6b6b
+style B fill:#4ecdc4
+style C fill:#45b7d1
+style D fill:#96ceb4
+style E fill:#ffeaa7
+style F fill:#dfe6e9
+style G fill:#a29bfe
+text
 
-    subgraph AI Processing
-        C -->|Convert to Vector| D[🧠 Sentence Transformer]
-        D <-->|Store/Query| E[📊 FAISS Vector DB\n255,122 Vectors]
-        C -->|Generate Response| F[🤖 LLM Response Generator]
-    end
-
-    subgraph Data
-        E -->|Retrieve Context| F
-        F -->|Cite Sources| C
-    end
-
-    %% Styling
-    classDef client fill:#e3f2fd,stroke:#2196F3,color:#0d47a1
-    classDef server fill:#e8f5e9,stroke:#4CAF50,color:#1b5e20
-    classDef ai fill:#f3e5f5,stroke:#9C27B0,color:#4a148c
-    classDef data fill:#fff3e0,stroke:#FF9800,color:#e65100
-    
-    class A,B client
-    class C server
-    class D,E,F ai
-    class E data
+</div>
 
 ---
 
